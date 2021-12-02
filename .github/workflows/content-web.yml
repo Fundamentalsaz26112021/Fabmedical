@@ -1,17 +1,15 @@
-me: content-web
+name: content-web
 
-   on:
+on:
   push:
      branches:
         - main
      paths:
         - 'content-web/**'
-
-  # Configure workflow to also support triggering manually
-  workflow_dispatch:
-
-   # Environment variables are defined so that they can be used throughout the job definitions.
-   env:
+# Configure workflow to also support triggering manually
+workflow_dispatch:
+# Environment variables are defined so that they can be used throughout the job definitions.
+env:
  imageRepository: 'content-web'
  resourceGroupName: 'fabmedical-containerboot'
  clusterName: 'fabmedical-COB'
